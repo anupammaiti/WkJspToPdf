@@ -26,11 +26,17 @@ I know that there is bower configuration and some nodeJS stuff but you shouldn't
 If you are setting it up in intellij follow these steps: 
 
 1. Open the project as a Maven Project
+
 	a. Windows: Press CTRL+ALT+SHIFT+S or Mac: Command + ;
-		i. Once the project settings window is open select the correct JDK
+
+	  i. Once the project settings window is open select the correct JDK
+
 	b. You can now do a clean install on the project from the Maven Projects tab on the right side of the screen.
-		i. If the Maven Projects tab is not there click the bottom left corner to open the menus.
+
+	  i. If the Maven Projects tab is not there click the bottom left corner to open the menus.
+
 2. Download Tomcat 8 or higher (if you don't already have it) and put it in a folder where you can access it later.
+
 3. Create a new local tomcat configuration
 
 	a. Click "Edit Configuration" in the dropdown on the top right
@@ -45,9 +51,9 @@ If you are setting it up in intellij follow these steps:
 
 	f. Click the 'Deployment' tab
 
-		i. Click the green plus sign '+' and add WAR:EXPLODED
+	  i. Click the green plus sign '+' and add WAR:EXPLODED
 
-		ii. Click okay
+	  ii. Click okay
 
 	g. Make sure the port is correct (I use 8080 and 1099) but you can use any free ports
 
