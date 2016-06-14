@@ -1,0 +1,22 @@
+{
+  "name": "pdftesting",
+  "description": "testingpdf",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "Nathan Fife"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  }
+}

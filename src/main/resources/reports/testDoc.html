@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+    @font-face {
+      font-family: "wqy";
+      src: url(https://s3-us-west-2.amazonaws.com/fifetechs3/font/wqy.ttf) format("truetype");
+    }
+    h1 { font-family: "wqy"}
+    tr {
+        page-break-inside: avoid;
+    }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://localhost:8080/js/handlebars/handlebars.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.ajax({
+                url: 'http://localhost:8080/pdf/data',
+                type: 'GET',
+                dataType: 'json',
+                success: function (response) {
+                    $('#container').highcharts({
+                        chart: {
+                            type: 'bar',
+                            animation: false
+                        },
+                        plotOptions: {
+                            line: {
+                                animation: false
+                            },
+                            series: {
+                                animation: false
+                            }
+                        },
+                        title: {
+                            text: 'Fruit Consumption'
+                        },
+                        xAxis: {
+                            categories: [response.name, 'Bananas', 'Oranges']
+                        },
+                        yAxis: {
+                            title: {
+                                text: 'Fruit eaten'
+                            }
+                        },
+                        series: [{
+                            name: 'Jane',
+                            data: [1, 0, 4]
+                        }, {
+                            name: 'John',
+                            data: [5, 7, 3]
+                        }]
+                    });
+                },
+                error: function(err) {
+                    $('#container').text(JSON.stringify(err));
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>正體字/繁體字</h1>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <div id="container">
+        Chart Content
+    </div>
+    <table style="page-break-after: always;">
+        <thead>
+            <tr>
+                <th>My first header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+            <tr>
+                <td>First content</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
