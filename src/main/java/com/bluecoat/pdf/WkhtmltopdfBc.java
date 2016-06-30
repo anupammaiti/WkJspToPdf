@@ -26,6 +26,23 @@ public class WkhtmltopdfBc {
     }
 
     public InputStream generateAsStream() {
+        File testPdf = new File("C:\\Dev\\WkJspToPdf\\src\\main\\resources\\test\\streamToWkhtml3.html");
+        try {
+            FileInputStream fileInputStream = new FileInputStream(testPdf);
+            ProcessBuilder processBuilder = new ProcessBuilder("wkhtmltopdf", "-", "-");
+            Process wkhtml = processBuilder.start();
+
+            OutputStream wkOutputStream = wkhtml.getOutputStream();
+            IOUtils.copy(fileInputStream, wkOutputStream);
+
+            return wkhtml.getInputStream();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error Running WKHTMLTOPDF process");
+        }
+    }
+
+    public InputStream streamLargeFileTest() {
         File testPdf = new File("C:\\Dev\\WkJspToPdf\\src\\main\\resources\\test\\large_test.pdf");
         try {
             FileInputStream fs = new FileInputStream(testPdf);
