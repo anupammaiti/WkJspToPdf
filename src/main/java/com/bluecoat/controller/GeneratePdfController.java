@@ -53,8 +53,7 @@ public class GeneratePdfController {
         WkhtmltopdfBc wkpdf = new WkhtmltopdfBc();
         try {
             InputStream stream = wkpdf.generateAsStream();
-            StreamEater streamEater = new StreamEater(stream, response.getOutputStream());
-            streamEater.run();
+            IOUtils.copy(stream, response.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("Error writing file to output stream");
