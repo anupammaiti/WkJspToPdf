@@ -24,7 +24,7 @@ public class ReportController {
 
     private List<PdfDataDto> getRows() {
         List<PdfDataDto> rows = new ArrayList<>();
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < 10000; i++) {
             rows.add(new PdfDataDto("Nathan", i));
         }
         return rows;

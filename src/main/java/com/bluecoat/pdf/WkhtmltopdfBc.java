@@ -25,6 +25,17 @@ public class WkhtmltopdfBc {
         this.source = source;
     }
 
+    public InputStream generateAsStream() {
+        File testPdf = new File("C:\\Dev\\WkJspToPdf\\src\\main\\resources\\test\\large_test.pdf");
+        try {
+            FileInputStream fs = new FileInputStream(testPdf);
+            return fs;
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public byte[] generatePdfAsBytes(boolean isUrl) {
         Process wkhtml;
         byte[] pdfBytes = null;

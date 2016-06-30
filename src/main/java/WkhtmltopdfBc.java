@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -49,9 +46,20 @@ public class WkhtmltopdfBc {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return outputString.toString();
     }
+
+    InputStream streamPdfConversion() {
+        InputStream is = new InputStream() {
+            @Override
+            public int read() throws IOException {
+                return 0;
+            }
+        };
+        return is;
+    }
+
+
 
     public String getSource() {
         URL url = classLoader.getResource(source);
