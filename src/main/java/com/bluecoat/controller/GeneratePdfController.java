@@ -53,6 +53,7 @@ public class GeneratePdfController {
             File file = getTestFile("large_page_3.html");
             FileInputStream fileInputStream = new FileInputStream(file);
             WkRunnable wkRunner = new WkRunnable(fileInputStream, response.getOutputStream());
+            wkRunner.setUrl("http://localhost:8080/report/test");
             wkRunner.run();
         } catch (IOException e) {
             e.printStackTrace();

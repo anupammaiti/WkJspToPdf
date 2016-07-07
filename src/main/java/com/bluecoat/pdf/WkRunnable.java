@@ -1,6 +1,7 @@
 package com.bluecoat.pdf;
 
 import org.apache.commons.io.IOUtils;
+import org.springframework.util.StringUtils;
 
 import java.io.*;
 
@@ -11,6 +12,7 @@ public class WkRunnable implements Runnable {
 
     private InputStream sourceStream;
     private OutputStream destinationStream;
+    private String url;
 
     public WkRunnable() {}
 
@@ -25,7 +27,10 @@ public class WkRunnable implements Runnable {
     @Override
     public void run() {
         try {
-            ProcessBuilder processBuilder = new ProcessBuilder(WK_HTML_TO_PDF_CMD, AS_STREAM, AS_STREAM);
+            ProcessBuilder processBuilder = new ProcessBuilder(
+                    WK_HTML_TO_PDF_CMD,
+                    !StringUtils.isEmpty(url) ? url : AS_STREAM,
+                    AS_STREAM);
             try {
                 Process wkhtml = processBuilder.start();
 
@@ -59,11 +64,15 @@ public class WkRunnable implements Runnable {
                 });
 
                 errorThread.start();
-                sourceThread.start();
+                if(StringUtils.isEmpty(url)) {
+                    sourceThread.start();
+                }
                 destinationThread.start();
 
                 errorThread.join();
-                sourceThread.join();
+                if(StringUtils.isEmpty(url)) {
+                    sourceThread.join();
+                }
                 destinationThread.join();
 
                 wkhtml.waitFor();
@@ -80,5 +89,10 @@ public class WkRunnable implements Runnable {
         }
     }
 
-
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

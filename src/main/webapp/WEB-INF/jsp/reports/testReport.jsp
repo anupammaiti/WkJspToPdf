@@ -83,7 +83,7 @@
     <tbody>
     <c:forEach items="${rows}" var="row">
         <tr>
-            <td><c:out value="${row.name}"/></td>
+            <td>${row.name}</td>
             <td><c:out value="${row.age}"/></td>
         </tr>
     </c:forEach>

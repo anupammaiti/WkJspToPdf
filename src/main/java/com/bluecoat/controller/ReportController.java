@@ -25,7 +25,7 @@ public class ReportController {
     private List<PdfDataDto> getRows() {
         List<PdfDataDto> rows = new ArrayList<>();
         for(int i = 0; i < 10000; i++) {
-            rows.add(new PdfDataDto("Nathan", i));
+            rows.add(new PdfDataDto("<img src=\"http://i.telegraph.co.uk/multimedia/archive/03589/Wellcome_Image_Awa_3589699k.jpg\" />", i));
         }
         return rows;
     }
